@@ -66,12 +66,6 @@ const FAQ: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-20 flex justify-center">
-          <div className="flex items-center gap-2 text-zinc-800 font-black text-[10px] uppercase tracking-[0.5em]">
-            <Sparkles size={14} /> Still have questions? Join our Telegram
-          </div>
-        </div>
-
       </div>
     </section>
   );

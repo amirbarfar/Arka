@@ -79,8 +79,8 @@ const ArkaFooter: React.FC = () => {
             BUILT WITH <Heart size={12} className="text-rose-500 fill-rose-500 mx-1" /> BY THE COMMUNITY
           </div>
           <div className="flex items-center gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms</a>
           </div>
         </div>
       </div>
