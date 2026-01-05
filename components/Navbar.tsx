@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
 
         {/* Right Section (Desktop) */}
         <div className="hidden lg:flex items-center gap-3 ml-auto">
-           <Link
+          <Link
             href="https://github.com/amirbarfar/Arka"
             target="_blank"
             rel="noopener noreferrer"
@@ -128,7 +128,7 @@ const Navbar: React.FC = () => {
                     className="h-5"
                   />
                 </Link>
-                
+
                 <button className="flex items-center gap-3 p-4 text-zinc-400">
                   <Languages size={20} />
                   <span className="text-sm font-bold uppercase">Language: EN</span>
@@ -175,8 +175,8 @@ const NavButton = ({ label, icon }: { label: string; icon: React.ReactNode }) =>
 
 // Mobile Button Component
 const MobileNavButton = ({ href, label, icon, onClick }: { href: string; label: string; icon: React.ReactNode; onClick: () => void }) => (
-  <Link 
-    href={href} 
+  <Link
+    href={href}
     onClick={onClick}
     className="flex flex-col items-center gap-2 p-4 bg-zinc-900/30 border border-white/5 rounded-2xl text-zinc-400 hover:text-white hover:border-indigo-500/50 transition-all"
   >

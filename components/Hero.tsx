@@ -9,6 +9,7 @@ import {
     SiNextdotjs,
     SiTailwindcss,
 } from "react-icons/si";
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
     return (
@@ -19,13 +20,15 @@ const Hero: React.FC = () => {
 
             {/* Badge */}
             <div className="mb-8 md:mb-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-1.5 bg-zinc-900/5 border border-white/10 rounded-full backdrop-blur-md cursor-pointer hover:bg-zinc-900/10 dark:hover:bg-white/8 transition-all group">
-                    <Zap size={12} className="text-indigo-500 fill-indigo-500" />
-                    <span className="text-[9px] md:text-[10px] font-black tracking-[0.1em] md:tracking-[0.2em] text-zinc-500 dark:text-zinc-400 uppercase">
-                        Arka Engine v1.0
-                    </span>
-                    <ArrowRight size={12} className="text-zinc-600 group-hover:translate-x-1 transition-transform" />
-                </div>
+                <Link href="/workflow">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-1.5 bg-zinc-900/5 border border-white/10 rounded-full backdrop-blur-md cursor-pointer hover:bg-zinc-900/10 dark:hover:bg-white/8 transition-all group">
+                        <Zap size={12} className="text-indigo-500 fill-indigo-500" />
+                        <span className="text-[9px] md:text-[10px] font-black tracking-[0.1em] md:tracking-[0.2em] text-zinc-500 dark:text-zinc-400 uppercase">
+                            Arka Engine v1.0
+                        </span>
+                        <ArrowRight size={12} className="text-zinc-600 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                </Link>
             </div>
 
             <div className="text-center max-w-5xl space-y-8 md:space-y-10">
@@ -42,16 +45,18 @@ const Hero: React.FC = () => {
                 {/* Subtitle */}
                 <p className="text-base md:text-xl text-zinc-500 max-w-2xl mx-auto font-medium leading-relaxed px-4">
                     Stop fighting with boilerplate. Arka ships production-grade
-                    <span className="text-zinc-900 dark:text-zinc-200 font-bold"> Next.js 15 </span> 
+                    <span className="text-zinc-900 dark:text-zinc-200 font-bold"> Next.js 15 </span>
                     apps with 100/100 Lighthouse scores by default.
                 </p>
 
                 {/* CTA Button */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
-                    <button className="w-full sm:w-auto h-16 px-10 bg-black dark:bg-white text-white dark:text-black rounded-2xl font-black text-base flex items-center justify-center gap-3 hover:bg-indigo-600 hover:text-white transition-all duration-500 shadow-2xl active:scale-95">
-                        Launch Arka Engine
-                        <ArrowRight size={20} strokeWidth={3} />
-                    </button>
+                    <Link href="/workflow">
+                        <button className="w-full sm:w-auto h-16 px-10 bg-black dark:bg-white text-white dark:text-black rounded-2xl font-black text-base flex items-center justify-center gap-3 hover:bg-indigo-600 hover:text-white transition-all duration-500 shadow-2xl active:scale-95">
+                            Launch Arka Engine
+                            <ArrowRight size={20} strokeWidth={3} />
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Tech Stack Section */}
@@ -59,7 +64,7 @@ const Hero: React.FC = () => {
                     <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-zinc-700">
                         Built for modern stacks
                     </p>
-                    
+
                     {/* Icons Container - ریسپانسیو شده */}
                     <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 opacity-30 px-4">
                         <SiReact className="w-7 h-7 md:w-9 md:h-9 text-black dark:text-white hover:opacity-100 hover:scale-110 transition-all duration-300" />

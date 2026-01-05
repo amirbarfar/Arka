@@ -86,7 +86,7 @@ const RegisterPage = () => {
 
                     {/* Footer Link */}
                     <p className="text-center text-zinc-600 text-[10px] font-black uppercase tracking-widest pt-2">
-                        Already registered? <Link href="/login" className="text-white hover:text-emerald-500 transition-colors underline underline-offset-4 ml-2">Access Account</Link>
+                        Already registered? <Link href="/auth/login" className="text-white hover:text-emerald-500 transition-colors underline underline-offset-4 ml-2">Access Account</Link>
                     </p>
                 </div>
             </div>

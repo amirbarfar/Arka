@@ -32,7 +32,6 @@ const TermsOfService = () => {
             <Navbar />
             <div className="bg-black text-white min-h-screen py-24 md:py-32 pt-32 md:pt-44 px-6 selection:bg-indigo-500" dir="ltr">
                 <div className="max-w-4xl mx-auto my-10">
-                    
                     {/* --- HEADER --- */}
                     <header className="mb-16 md:mb-24 border-b border-white/10 pb-10 md:pb-16 relative">
                         <div className="flex items-center gap-3 mb-6">
