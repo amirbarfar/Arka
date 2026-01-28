@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Box, Github, Languages, ArrowUpRight, Layout, Cpu, Info, Menu, X } from 'lucide-react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion'; // برای انیمیشن
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,6 @@ const Navbar: React.FC = () => {
         shadow-[0_20px_50px_rgba(0,0,0,0.8)]
         w-full max-w-5xl
       ">
-        {/* Logo */}
         <Link href={'/'} className="flex items-center gap-3 border-r border-white/5 pr-4 md:pr-6 group cursor-pointer select-none">
           <div className="relative">
             <Box size={20} className="text-indigo-500 group-hover:scale-110 transition-transform duration-500" strokeWidth={2.5} />
@@ -29,14 +28,12 @@ const Navbar: React.FC = () => {
           <span className="text-sm font-[1000] tracking-[0.2em] text-white transition-colors group-hover:text-indigo-400">ARKA</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-1">
-          <NavButton label="Templates" icon={<Layout size={14} />} />
-          <NavButton label="Design" icon={<Cpu size={14} />} />
+          <NavButton label="Docs" icon={<Layout size={14} />} />
+          <NavButton label="Generator" icon={<Cpu size={14} />} />
           <NavButton label="About" icon={<Info size={14} />} />
         </div>
 
-        {/* Right Section (Desktop) */}
         <div className="hidden lg:flex items-center gap-3 ml-auto">
            <Link
             href="https://github.com/amirbarfar/Arka"
@@ -82,17 +79,13 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
         </div>
-
-        {/* Mobile Toggle */}
         <button
           onClick={toggleMenu}
-          className="lg:hidden p-2 text-white hover:text-indigo-400 transition-colors z-[110]"
+          className="lg:hidden p-2 text-white hover:text-indigo-400 transition-colors z-110"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
-
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -102,16 +95,14 @@ const Navbar: React.FC = () => {
             className="absolute top-20 left-4 right-4 bg-[#050505]/95 backdrop-blur-3xl border border-white/10 rounded-3xl p-6 shadow-2xl pointer-events-auto lg:hidden"
           >
             <div className="flex flex-col gap-6">
-              {/* Navigation Links */}
               <div className="grid grid-cols-2 gap-2">
-                <MobileNavButton href="/templates" label="Templates" icon={<Layout size={18} />} onClick={toggleMenu} />
-                <MobileNavButton href="/design" label="Design" icon={<Cpu size={18} />} onClick={toggleMenu} />
+                <MobileNavButton href="/docs" label="Docs" icon={<Layout size={18} />} onClick={toggleMenu} />
+                <MobileNavButton href="/Generator" label="Generator" icon={<Cpu size={18} />} onClick={toggleMenu} />
                 <MobileNavButton href="/about" label="About" icon={<Info size={18} />} onClick={toggleMenu} />
               </div>
 
               <div className="h-px bg-white/5 w-full" />
 
-              {/* GitHub & Language */}
               <div className="flex flex-col gap-3">
                 <Link
                   href="https://github.com/amirbarfar/Arka"
@@ -134,8 +125,6 @@ const Navbar: React.FC = () => {
                   <span className="text-sm font-bold uppercase">Language: EN</span>
                 </button>
               </div>
-
-              {/* Auth Buttons */}
               <div className="flex flex-col gap-3">
                 <Link href="/auth/login" className="w-full" onClick={toggleMenu}>
                   <button className="w-full py-4 text-sm font-bold text-zinc-400 bg-transparent border border-white/5 rounded-2xl">
@@ -157,7 +146,6 @@ const Navbar: React.FC = () => {
   );
 };
 
-// Desktop Button Component
 const NavButton = ({ label, icon }: { label: string; icon: React.ReactNode }) => (
   <Link href={`/${label.toLowerCase()}`} className="
     relative flex items-center gap-2.5 px-4 py-2
@@ -173,7 +161,6 @@ const NavButton = ({ label, icon }: { label: string; icon: React.ReactNode }) =>
   </Link>
 );
 
-// Mobile Button Component
 const MobileNavButton = ({ href, label, icon, onClick }: { href: string; label: string; icon: React.ReactNode; onClick: () => void }) => (
   <Link 
     href={href} 

@@ -8,8 +8,6 @@ const LoginPage = () => {
     return (
         <div className="bg-black min-h-screen text-white flex flex-col lg:flex-row overflow-x-hidden" dir="ltr">
             
-            {/* --- بخش سمت چپ (Branding) --- */}
-            {/* در موبایل ارتفاع کمتری می‌گیرد و در دسکتاپ تمام صفحه است */}
             <div className="lg:w-1/2 min-h-[40vh] lg:min-h-screen p-8 md:p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/5 relative overflow-hidden bg-zinc-950">
                 <div className="absolute top-0 left-0 w-full h-full bg-indigo-600/5 blur-[120px] pointer-events-none" />
                 
@@ -31,7 +29,6 @@ const LoginPage = () => {
                 </div>
             </div>
 
-            {/* --- بخش سمت راست (Form) --- */}
             <div className="lg:w-1/2 flex items-center justify-center p-6 md:p-12 lg:p-24 bg-black">
                 <div className="w-full max-w-md space-y-8 md:space-y-12">
                     
@@ -46,7 +43,7 @@ const LoginPage = () => {
                             <div className="group space-y-2">
                                 <label className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 ml-1">Identity (Email)</label>
                                 <div className="relative">
-                                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-700 group-focus-within:text-indigo-500 transition-colors w-[18px] h-[18px]" />
+                                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-700 group-focus-within:text-indigo-500 transition-colors w-4.5 h-4.5" />
                                     <input 
                                         type="email" 
                                         placeholder="SENDER@CORE.COM" 
@@ -59,7 +56,7 @@ const LoginPage = () => {
                             <div className="group space-y-2">
                                 <label className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 ml-1">Access Key (Password)</label>
                                 <div className="relative">
-                                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-700 group-focus-within:text-indigo-500 transition-colors w-[18px] h-[18px]" />
+                                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-700 group-focus-within:text-indigo-500 transition-colors w-4.5 h-4.5" />
                                     <input 
                                         type="password" 
                                         placeholder="••••••••" 
@@ -70,7 +67,7 @@ const LoginPage = () => {
                         </div>
 
                         <button className="w-full py-4 md:py-5 bg-white text-black rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 hover:text-white transition-all transform active:scale-[0.98] flex items-center justify-center gap-3">
-                            Authorize <ArrowRight className="w-[18px] h-[18px]" />
+                            Authorize <ArrowRight className="w-4.5 h-4.5" />
                         </button>
                     </form>
 
@@ -83,18 +80,18 @@ const LoginPage = () => {
                     {/* Social Login */}
                     <div className="grid grid-cols-2 gap-4">
                         <button className="py-4 bg-zinc-950 border border-white/5 rounded-2xl flex items-center justify-center gap-3 hover:bg-white hover:text-black transition-all group">
-                            <Github className="w-[18px] h-[18px]" /> 
+                            <Github className="w-4.5 h-4.5" /> 
                             <span className="text-[10px] font-black uppercase tracking-widest">GitHub</span>
                         </button>
                         <button className="py-4 bg-zinc-950 border border-white/5 rounded-2xl flex items-center justify-center gap-3 hover:bg-white hover:text-black transition-all group">
-                            <Chrome className="w-[18px] h-[18px]" /> 
+                            <Chrome className="w-4.5 h-4.5" /> 
                             <span className="text-[10px] font-black uppercase tracking-widest">Google</span>
                         </button>
                     </div>
 
                     {/* Footer Link */}
                     <p className="text-center text-zinc-600 text-[10px] font-black uppercase tracking-widest pt-4">
-                        New here? <Link href="/register" className="text-white hover:text-indigo-500 transition-colors underline underline-offset-4 ml-2">Initialize Account</Link>
+                        New here? <Link href="/auth/register" className="text-white hover:text-indigo-500 transition-colors underline underline-offset-4 ml-2">Initialize Account</Link>
                     </p>
                 </div>
             </div>
